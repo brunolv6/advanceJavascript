@@ -8,9 +8,9 @@
         var a = 3; //var gera function scope
         let b = 4; //let gera block scope 
         const c = 5; //const gera block scope
-        console.log(`Valor dentro da função e do bloco 'IF' é: var a = ${a}, let b = ${b}, const c = ${c}\n`);
+        console.log(`Valor dentro da função e do bloco 'IF' é: \n\t\tvar a = ${a} \n\t\tlet b = ${b} \n\t\tconst c = ${c}\n`);
     }
-    console.log(`Valor dentro da função e FORA do bloco 'IF' é: var a = ${a}, let b = não pode ser acessado, const c = não pode ser acessado\n`);
+    console.log(`Valor dentro da função e FORA do bloco 'IF' é: \n\t\tvar a = ${a} \n\t\tlet b = não pode ser acessado \n\t\tconst c = não pode ser acessado\n`);
     /* 
         LET E CONST GERAM BLOCK SCOPE, LOGO NÃO É ACESSADA FORA DO BLOCO "IF"
         console.log("valor de let b = " + b); 
@@ -18,7 +18,7 @@
     */
 })();
 
-console.log(`Valor FORA da função e FORA do bloco 'IF' é: var a = não pode ser acessado, let b = não pode ser acessado, const c = não pode ser acessado\n`);
+console.log(`Valor FORA da função e FORA do bloco 'IF' é: \n\t\tvar a = não pode ser acessado \n\t\tlet b = não pode ser acessado \n\t\tconst c = não pode ser acessado\n`);
 
 /* 
     VAR GERA FUNCTION SCOPE, LOGO NÃO É ACESSADA FORA DA FUNÇÃO
