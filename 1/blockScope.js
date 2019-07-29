@@ -2,9 +2,15 @@
     FUNCTION SCOPE X BLOCK SCOPE
 */
 
+var e = 1;
+let f = 2;
+const g = 3;
+
 (function scope (){
+    console.log("\nVariáveis geradas fora da função, imprime DENTRO DA FUNÇÃO & FORA DO BLOCO " + e, f, g + "\n");
     if(3>2){
-        console.log("\nVariaveis geradas dentro de bloco if de dentro de uma função\n")
+        console.log("Variáveis geradas fora da função, imprime DENTRO DA FUNÇÃO & DO BLOCO " + e, f, g + "\n");
+        console.log("Variaveis geradas dentro de bloco if de dentro de uma função\n")
         var a = 3; //var gera function scope
         let b = 4; //let gera block scope 
         const c = 5; //const gera block scope
@@ -17,7 +23,7 @@
         console.log("valor de const c = " + c); 
     */
 })();
-
+console.log("Variáveis geradas fora da função, imprime FORA DA FUNÇÃO & DO BLOCO " + e, f, g + "\n");
 console.log(`Valor FORA da função e FORA do bloco 'IF' é: \n\t\tvar a = não pode ser acessado \n\t\tlet b = não pode ser acessado \n\t\tconst c = não pode ser acessado\n`);
 
 /* 
