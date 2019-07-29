@@ -7,9 +7,9 @@ let f = 2;
 const g = 3;
 
 (function scope (){
-    console.log("\nVariáveis geradas fora da função, imprime DENTRO DA FUNÇÃO & FORA DO BLOCO " + e, f, g + "\n");
+    console.log("\nVariáveis geradas fora da função[SCOPE CHAIN], imprime DENTRO DA FUNÇÃO & FORA DO BLOCO " + e, f, g + "\n");
     if(3>2){
-        console.log("Variáveis geradas fora da função, imprime DENTRO DA FUNÇÃO & DO BLOCO " + e, f, g + "\n");
+        console.log("Variáveis geradas fora da função[SCOPE CHAIN], imprime DENTRO DA FUNÇÃO & DO BLOCO " + e, f, g + "\n");
         console.log("Variaveis geradas dentro de bloco if de dentro de uma função\n")
         var a = 3; //var gera function scope
         let b = 4; //let gera block scope 
@@ -23,10 +23,19 @@ const g = 3;
         console.log("valor de const c = " + c); 
     */
 })();
-console.log("Variáveis geradas fora da função, imprime FORA DA FUNÇÃO & DO BLOCO " + e, f, g + "\n");
+console.log("Variáveis geradas fora da função[SCOPE CHAIN], imprime FORA DA FUNÇÃO & DO BLOCO " + e, f, g + "\n");
 console.log(`Valor FORA da função e FORA do bloco 'IF' é: \n\t\tvar a = não pode ser acessado \n\t\tlet b = não pode ser acessado \n\t\tconst c = não pode ser acessado\n`);
 
 /* 
-    VAR GERA FUNCTION SCOPE, LOGO NÃO É ACESSADA FORA DA FUNÇÃO
-    console.log("valor de var a = " + a); 
+    SCOPE CHAIN
+    if(variavel no seu scopo)
+        return variavel
+    else
+        if(variavel no scopo da função que a gerou)
+            return variavel da função que ele esta dentro
+        else
+            if(variavel no scopo da função que gerou a função que a gerou)
+                return variavel da funcao da funcao que el esta dentro
+            else
+                if(......)
 */
